@@ -6,11 +6,10 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"os"
 
 	"compress/gzip"
 	"log"
-
-	"os"
 
 	"os/exec"
 	"path"

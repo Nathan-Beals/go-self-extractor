@@ -3,6 +3,8 @@ Quick command line utility written in Go for creating self extracting archives.
 
 ### Installation
 
+Install Golang if you don't have it installed.
+
 Install with
 
 	$ go get github.com/ndbeals/go-selfextractor
