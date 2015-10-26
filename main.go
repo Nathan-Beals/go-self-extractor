@@ -26,11 +26,11 @@ func parseFlags() config {
 		fmt.Printf("Usage: %s [options] <input directories>\n\n", os.Args[0])
 		flag.PrintDefaults()
 	}
-	templateFolder := flag.String("t", "template", "Set this to the directory containing the template go expander file")
+	//templateFolder := flag.String("t", "template", "Set this to the directory containing the template go expander file")
 
 	flag.Parse()
 
-	*templateFolder = path.Clean(*templateFolder)
+	//*templateFolder = path.Clean(*templateFolder)
 
 	if flag.NArg() < 2 {
 		flag.Usage()
@@ -41,11 +41,6 @@ func parseFlags() config {
 	ret := config{flag.Args()}
 
 	return ret
-}
-
-type fileInfo struct {
-	path   string
-	header os.FileInfo
 }
 
 func buildTar(searchPath string) bytes.Buffer {
